@@ -22,4 +22,4 @@ def test_patterns(text,patterns):
 
 if __name__ == '__main__':
     test_patterns('abbaaabbbbaaaaa',
-    [('ab', "'a' followed by 'b'"),])
+    [('ab', "'a' followed by 'b'"), 'a?', 'b+'])
