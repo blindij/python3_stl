@@ -33,3 +33,6 @@ a.out
 #tf files
 *.tfevents.*
 *dSYM/*
+
+# Subdirectory where pytest caches files
+.pytest_cache/

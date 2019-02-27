@@ -1,11 +1,19 @@
+import pytest
 import re
 
-pattern = 'this'
-text = 'Does this text match the pattern?'
-match = re.search(pattern,text)
+@pytest.fixture()
+def some_data():
+    """
+    Make some arbitrary text, a search pattern and do a regular
+    expression search.
+    """
+    pattern = 'this'
+    text = 'Does this text match the pattern?'
+    match = re.search(pattern,text)
+    s = match.start()
+    e = match.end()
+    return (s,e)
 
-s = match.start()
-e = match.end()
-
-print('Found "{}"\nin "{}\"\nfrom {} to {} ("{}")'.format(match.re.pattern,
-match.string, s, e, text[s:e]))
+def test_regex_search(some_data):
+    """Test for fixutre's return data"""
+    assert some_data == (5,9)
