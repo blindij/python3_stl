@@ -28,6 +28,7 @@ build
 a.out
 *.x
 *.pyc
+.pytest_cache/
 
 #tf files
 *.tfevents.*
