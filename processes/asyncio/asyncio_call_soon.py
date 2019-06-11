@@ -9,6 +9,9 @@ async def main(loop):
     loop.call_soon(callback, 1)
     wrapped = functools.partial(callback, kwarg='not default')
     loop.call_soon(wrapped, 2)
+    loop.call_soon(callback, 'ab')
+    loop.call_soon(callback, 'cd')
+    loop.call_soon(callback, 'ef')
 
     await asyncio.sleep(0.1)
 
