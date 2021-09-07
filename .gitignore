@@ -36,3 +36,5 @@ a.out
 
 # Subdirectory where pytest caches files
 .pytest_cache/
+# downloaded mp3 files
+*.mp3
