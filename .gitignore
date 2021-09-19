@@ -38,3 +38,11 @@ a.out
 .pytest_cache/
 # downloaded mp3 files
 *.mp3
+# compressed files
+*.tgz
+*.gz
+# text files
+*.txt
+!lorem.txt
+# data file
+*.dat
